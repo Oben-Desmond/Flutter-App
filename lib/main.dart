@@ -12,25 +12,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.teal,
         appBar: AppBar(
           title: Text('Demo'),
           backgroundColor: Colors.red,
         ),
-        body: Container(
-          child: Center(
+        body: SafeArea(
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.white,
+            margin: EdgeInsets.fromLTRB(30, 10, 30, 4),
             child: Text(text),
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: ()=>{ },
+          onPressed: () => {},
           child: Icon(Icons.add),
           backgroundColor: Colors.red,
         ),
       ),
     );
   }
-
 }
 
 class MyWidget extends StatelessWidget {
