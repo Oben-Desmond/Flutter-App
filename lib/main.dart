@@ -6,37 +6,36 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  String url =
-      'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg';
-  String image = 'images/movie.jpg';
-  
-  List showWidgets(){
-     var nums=[1,2,3,4,5];
-     var widgits=[Card(child: Image(image: AssetImage(image),),),Card(child: Image(image: NetworkImage(url),),)];
-     
-
-
-     return widgits;
-  }
+  String text = 'my demo app';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text(
-            'I am Rich ',
-          ),
-          backgroundColor: Colors.blueGrey[900],
+          title: Text('Demo'),
+          backgroundColor: Colors.red,
         ),
-        backgroundColor: Colors.grey[100],
-        body: ListView(
-          children: [
-           ...showWidgets()
-          ],
+        body: Container(
+          child: Center(
+            child: Text(text),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: ()=>{ },
+          child: Icon(Icons.add),
+          backgroundColor: Colors.red,
         ),
       ),
     );
+  }
+
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
