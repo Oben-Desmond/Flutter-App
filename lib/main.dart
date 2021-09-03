@@ -18,14 +18,26 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: SafeArea(
-          child: Container(
+            child: Column(children: [
+          Container(
+              height: 100,
+              width: 100,
+              color: Colors.white,
+              child: Text('Container 1')),
+          Container(
             height: 100,
             width: 100,
-            color: Colors.white,
-            margin: EdgeInsets.fromLTRB(30, 10, 30, 4),
-            child: Text(text),
+            color: Colors.blue,
+            child: Text('Container 1'),
           ),
-        ),
+             Container(
+            height: 100,
+            width: 100,
+            color: Colors.orange,
+            child: Text('Container 1'),
+          )
+          
+        ])),
         floatingActionButton: FloatingActionButton(
           onPressed: () => {},
           child: Icon(Icons.add),
